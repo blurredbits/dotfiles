@@ -1,0 +1,8 @@
+#!/bin/sh -x
+CURRENT=`git branch | grep '\*' | awk '{print $2}'`
+REMOTE=${CURRENT%-local}
+
+git checkout ${REMOTE}
+git pull origin ${REMOTE} --tags
+git checkout ${CURRENT}
+git rebase ${REMOTE}

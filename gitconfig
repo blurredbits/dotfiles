@@ -1,0 +1,15 @@
+[user]
+	name = Blurredbits
+	email = mmorris00@mac.com
+[core]
+	editor = subl -n -w
+	excludesfiles = /Users/mmorris/.gitignore
+	excludesfile = /Users/mmorris/.gitignore_global
+[color]
+	ui = true
+[heroku]
+	account = personal
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true

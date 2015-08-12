@@ -1,0 +1,9 @@
+#!/bin/sh -x
+
+CURRENT=`git branch | grep '\*' | awk '{print $2}'`
+REMOTE=${CURRENT%-local}
+
+git checkout ${REMOTE}
+git merge ${CURRENT}
+git push origin ${REMOTE} --tags
+git checkout ${CURRENT}
