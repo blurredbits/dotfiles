@@ -11,21 +11,18 @@ if [ -f /opt/local/etc/bash_completion ]; then
     . /opt/local/etc/bash_completion
 fi
 
-source $(brew --prefix nvm)/nvm.sh
-
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
 
 GIT_PS1_SHOWDIRTYSTATE=1
 
-PS1='`if [ $HOSTNAME = "hela.local" ]; then echo "\[\033[37m\]↳\u@\h\[\033[00m\]"; else echo "\[\033[39m\]↳\u@\h\[\033[00m\]"; fi`:\[\033[39m\]\w\[\033[31m\]$(__git_ps1 " [ %s ]")\[\033[00m\]\$ '
+PS1='`if [ $HOSTNAME = "eir.local" ]; then echo "\[\033[37m\]↳\u@\h\[\033[00m\]"; else echo "\[\033[39m\]↳\u@\h\[\033[00m\]"; fi`:\[\033[39m\]\w\[\033[31m\]$(__git_ps1 " [ %s ]")\[\033[00m\]\$ '
 
 #---------------------------------------------------------------------
 # Aliases
 #---------------------------------------------------------------------
 
-alias cor='cd ~/Coroutine'
 alias sco='cd ~/Scout'
 alias rpg='cd ~/programming/rails_projects'
 alias rupg='cd ~/programming/ruby'
@@ -35,15 +32,13 @@ alias jspg='cd ~/programming/javascript'
 # Add SSH Identity
 #---------------------------------------------------------------------
 
-ssh-add ~/.ssh/id_rsa
 
 #---------------------------------------------------------------------
 # PATH Commands
 #---------------------------------------------------------------------
 
-PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
+PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
-export JAVA_HOME=$(/usr/libexec/java_home)
 
 #---------------------------------------------------------------------
 # Docker

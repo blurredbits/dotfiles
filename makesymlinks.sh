@@ -10,7 +10,7 @@
 
 dir=~/dotfiles           # dotfiles directory
 olddir=~/dotfiles_old    # old dotfiles backup directory
-files="bashprofile gitconfig gitignore pull push railsrc"   # list of files/folder to symlink in homedir
+files="bash_profile gitconfig gitignore pull push railsrc gitignore_global"   # list of files/folder to symlink in homedir
 
 # Create dotfiles_old in homedir
 echo "Create $olddir for back of any existing dotfiles in ~"
@@ -27,5 +27,5 @@ for file in $files; do
   echo "Moving any existing dotfiles from ~ to $olddir"
   mv ~/.$file ~/dotfiles_old
   echo "Creating symlink to $file in home directory."
-  ln -s $dir/#file ~/.$file
+  ln -s $dir/$file ~/.$file
 done
