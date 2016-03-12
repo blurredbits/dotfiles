@@ -15,6 +15,8 @@ if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
 
+source ~/.git-prompt.sh
+
 GIT_PS1_SHOWDIRTYSTATE=1
 
 PS1='`if [ $HOSTNAME = "eir.local" ]; then echo "\[\033[37m\]↳\u@\h\[\033[00m\]"; else echo "\[\033[39m\]↳\u@\h\[\033[00m\]"; fi`:\[\033[39m\]\w\[\033[31m\]$(__git_ps1 " [ %s ]")\[\033[00m\]\$ '
@@ -53,3 +55,4 @@ export DOCKER_TLS_VERIFY=1
 #---------------------------------------------------------------------
 export GOPATH=~/gocode
 export PATH="$PATH:$GOPATH/bin"
+
