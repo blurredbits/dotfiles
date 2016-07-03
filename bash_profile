@@ -29,6 +29,7 @@ alias sco='cd ~/Scout'
 alias rpg='cd ~/programming/rails_projects'
 alias rupg='cd ~/programming/ruby'
 alias jspg='cd ~/programming/javascript'
+alias be='bundle exec'
 
 #---------------------------------------------------------------------
 # Add SSH Identity
@@ -43,12 +44,13 @@ PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
 
 #---------------------------------------------------------------------
-# Docker
+# Docker/Dinghy
 #---------------------------------------------------------------------
 
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/mmorris/.boot2docker/certs/boot2docker-vm
+export DOCKER_HOST=tcp://192.168.99.100:2376
+export DOCKER_CERT_PATH=/Users/mmorris/.docker/machine/machines/dinghy
 export DOCKER_TLS_VERIFY=1
+export DOCKER_MACHINE_NAME=dinghy
 
 #---------------------------------------------------------------------
 # Go
@@ -56,3 +58,6 @@ export DOCKER_TLS_VERIFY=1
 export GOPATH=~/gocode
 export PATH="$PATH:$GOPATH/bin"
 
+export ROLLBAR_POST_CLIENT_ITEM=511e1cf8da1b49458440d781484dbff7
+
+export PATH="/usr/local/sbin:$PATH"
