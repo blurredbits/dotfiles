@@ -16,6 +16,6 @@
       "single"
     ],
     "no-multiple-empty-lines": [2, {"max": 2, "maxEOF": 1}],
-    "semi": ["error", "always"]
+    "semi": [2, "always"]
   }
 }

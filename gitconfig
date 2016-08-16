@@ -6,7 +6,22 @@
 	excludesfiles = /Users/mmorris/.gitignore
 	excludesfile = /Users/mmorris/.gitignore_global
 [color]
-	ui = true
+	branch = auto
+	diff = auto
+	status = auto
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
 [heroku]
 	account = personal
 [filter "hawser"]
@@ -20,11 +35,12 @@
 	smudge = git-lfs smudge %f
 	required = true
 [merge]
-	tool = diffmerge
+	tool = opendiff
 [diff]
-	tool = diffmerge
-[difftool "diffmerge"]
-	cmd = /usr/local/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
-[mergetool "diffmerge"]
+	tool = opendiff
+[difftool "opendiff"]
+	cmd = /usr/local/bin/opendiff \"$LOCAL\" \"$REMOTE\"
+[mergetool "opendiff"]
 	trustExitCode = true
-	cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	cmd = /usr/local/bin/opendiff --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+
