@@ -66,3 +66,4 @@ export PATH="$PATH:$GOPATH/bin"
 export ROLLBAR_POST_CLIENT_ITEM=511e1cf8da1b49458440d781484dbff7
 
 export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.yarn/bin:$PATH"
