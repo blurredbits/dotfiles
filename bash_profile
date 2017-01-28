@@ -28,7 +28,6 @@ PS1='`if [ $HOSTNAME = "eir.local" ]; then echo "\[\033[37m\]\u@\h\[\033[00m\]";
 # Aliases
 #---------------------------------------------------------------------
 
-alias sco='cd ~/Scout'
 alias rpg='cd ~/programming/rails_projects'
 alias rupg='cd ~/programming/ruby'
 alias jspg='cd ~/programming/javascript'
@@ -44,9 +43,9 @@ alias rad='cd ~/Radial'
 # PATH Commands
 #---------------------------------------------------------------------
 
-PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+# PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
-export PATH=$PATH
+# export PATH=$PATH
 
 #---------------------------------------------------------------------
 # Docker/Dinghy
@@ -56,6 +55,12 @@ export DOCKER_HOST=tcp://192.168.99.100:2376
 export DOCKER_CERT_PATH=/Users/mmorris/.docker/machine/machines/dinghy
 export DOCKER_TLS_VERIFY=1
 export DOCKER_MACHINE_NAME=dinghy
+
+#---------------------------------------------------------------------
+# Yarn
+#---------------------------------------------------------------------
+
+export PATH="$PATH:`yarn global bin`"
 
 #---------------------------------------------------------------------
 # Go
