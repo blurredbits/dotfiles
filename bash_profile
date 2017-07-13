@@ -33,6 +33,7 @@ alias rpg='cd ~/programming/rails_projects'
 alias rupg='cd ~/programming/ruby'
 alias jspg='cd ~/programming/javascript'
 alias be='bundle exec'
+alias pm='python manage.py'
 alias rad='cd ~/Radial'
 
 #---------------------------------------------------------------------
@@ -66,4 +67,10 @@ export PATH="$PATH:$GOPATH/bin"
 export ROLLBAR_POST_CLIENT_ITEM=511e1cf8da1b49458440d781484dbff7
 
 export PATH="/usr/local/sbin:$PATH"
-export PATH="$HOME/.yarn/bin:$PATH"
+
+export NVM_DIR="/Users/mmorris/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export WMSJAVA_HOME="/Library/WowzaStreamingEngine-4.6.0/java"
+
+eval "$(thefuck --alias)"
