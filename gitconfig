@@ -36,12 +36,19 @@
 	smudge = git-lfs smudge %f
 	required = true
 [merge]
-	tool = opendiff
+	tool = p4mergetool
 [diff]
-	tool = opendiff
+	tool = p4mergetool
 [difftool "opendiff"]
 	cmd = /usr/local/bin/opendiff \"$LOCAL\" \"$REMOTE\"
 [mergetool "opendiff"]
 	trustExitCode = true
 	cmd = /usr/local/bin/opendiff --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 
+[mergetool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $PWD/$BASE $PWD/$REMOTE $PWD/$LOCAL $PWD/$MERGED
+	trustExitCode = false
+[mergetool]
+	keepBackup = false
+[difftool "p4mergetool"]
+	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge $LOCAL $REMOTE

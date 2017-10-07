@@ -70,6 +70,7 @@ alias rpg='cd ~/programming/rails_projects'
 alias rupg='cd ~/programming/ruby'
 alias jspg='cd ~/programming/javascript'
 alias be='bundle exec'
+alias pm='python manage.py'
 alias rad='cd ~/Radial'
 alias ryzen='ssh ryzen.local'
 
